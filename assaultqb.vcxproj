@@ -267,6 +267,7 @@
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
+    <None Include="lib\SDL2.dll" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>

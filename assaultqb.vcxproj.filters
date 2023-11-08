@@ -325,6 +325,7 @@
     <None Include="README.md" />
     <None Include=".gitignore" />
     <None Include=".gitattributes" />
+    <None Include="lib\SDL2.dll" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE.txt" />
