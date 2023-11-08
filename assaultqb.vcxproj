@@ -267,11 +267,16 @@
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
-    <None Include="lib\SDL2.dll" />
+    <None Include="lib\sdl_x86\SDL2.dll" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\sdl_x86\SDL2.lib" />
+    <Library Include="lib\sdl_x86\SDL2main.lib" />
+    <Library Include="lib\sdl_x86\SDL2test.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

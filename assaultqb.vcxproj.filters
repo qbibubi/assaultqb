@@ -325,9 +325,14 @@
     <None Include="README.md" />
     <None Include=".gitignore" />
     <None Include=".gitattributes" />
-    <None Include="lib\SDL2.dll" />
+    <None Include="lib\sdl_x86\SDL2.dll" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\sdl_x86\SDL2.lib" />
+    <Library Include="lib\sdl_x86\SDL2main.lib" />
+    <Library Include="lib\sdl_x86\SDL2test.lib" />
   </ItemGroup>
 </Project>
