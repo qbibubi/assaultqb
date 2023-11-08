@@ -2,7 +2,5 @@
 
 void gui::init() noexcept 
 {
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
 
 }
