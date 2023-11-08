@@ -172,6 +172,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\gui.h" />
+    <ClInclude Include="include\imgui\imconfig.h" />
+    <ClInclude Include="include\imgui\imgui.h" />
+    <ClInclude Include="include\imgui\imgui_impl_opengl3.h" />
+    <ClInclude Include="include\imgui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="include\imgui\imgui_impl_sdl2.h" />
+    <ClInclude Include="include\imgui\imgui_internal.h" />
+    <ClInclude Include="include\imgui\imstb_rectpack.h" />
+    <ClInclude Include="include\imgui\imstb_textedit.h" />
+    <ClInclude Include="include\imgui\imstb_truetype.h" />
     <ClInclude Include="include\sdl\begin_code.h" />
     <ClInclude Include="include\sdl\close_code.h" />
     <ClInclude Include="include\sdl\SDL.h" />
@@ -253,21 +262,28 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="include\imgui\imgui.cpp" />
+    <ClCompile Include="include\imgui\imgui_demo.cpp" />
+    <ClCompile Include="include\imgui\imgui_draw.cpp" />
+    <ClCompile Include="include\imgui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="include\imgui\imgui_impl_sdl2.cpp" />
+    <ClCompile Include="include\imgui\imgui_tables.cpp" />
+    <ClCompile Include="include\imgui\imgui_widgets.cpp" />
     <ClCompile Include="src\gui.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
-    <None Include="lib\SDLx86_64\SDL2.dll" />
+    <None Include="lib\SDL2x86_64\SDL2.dll" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="LICENSE.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Library Include="lib\SDLx86_64\SDL2.lib" />
-    <Library Include="lib\SDLx86_64\SDL2main.lib" />
-    <Library Include="lib\SDLx86_64\SDL2test.lib" />
+    <Library Include="lib\SDL2x86_64\SDL2.lib" />
+    <Library Include="lib\SDL2x86_64\SDL2main.lib" />
+    <Library Include="lib\SDL2x86_64\SDL2test.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
