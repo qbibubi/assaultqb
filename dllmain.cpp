@@ -1,5 +1,8 @@
 #include "include/console.h"
 
+
+Console console;
+
 BOOL WINAPI hookedSwapBuffers(HDC hdc)
 {
     // hook shenanigans
@@ -9,7 +12,18 @@ BOOL WINAPI hookedSwapBuffers(HDC hdc)
 
 DWORD __stdcall Thread(LPVOID param)
 {
-    // threading shenaningans
+    console.init();
+    while (true)
+    {
+        console.printInfo();
+        if (GetAsyncKeyState(VK_INSERT) & 1)
+        {
+            break;
+        }
+    }
+    console.exit();
+    
+    FreeLibraryAndExitThread(reinterpret_cast<HMODULE>(param), 0);
 }
     
 BOOL APIENTRY DllMain( HMODULE hModule,

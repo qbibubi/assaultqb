@@ -1,17 +1,18 @@
 #pragma once
 
+
 #include <windows.h>
 #include <iostream>
+#include <iomanip>
 
-class Console 
+
+struct Console 
 {
-public:
-	void Init();
-	void Exit();
+	void init();
+	void exit();
+	void printInfo();
 
 	FILE* m_dummy;
-	
-private:
-	
+	bool isAttached = false;
 };
 	
