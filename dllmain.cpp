@@ -1,6 +1,17 @@
-#include <windows.h>
-#include <iostream>
+#include "include/console.h"
 
+BOOL WINAPI hookedSwapBuffers(HDC hdc)
+{
+    // hook shenanigans
+
+    return SwapBuffers(hdc);
+}
+
+DWORD __stdcall Thread(LPVOID param)
+{
+    // threading shenaningans
+}
+    
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
                        LPVOID lpReserved
@@ -9,12 +20,8 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
-        AllocConsole();
-        FILE* fDummy;
-        freopen_s(&fDummy, "CONIN$", "r", stdin);
-        freopen_s(&fDummy, "CONOUT$", "w", stderr);
-        freopen_s(&fDummy, "CONOUT$", "w", stdout);
-        std::cout << "Kil me" << std::endl;
+        CreateThread(NULL, 0, Thread, hModule, NULL, NULL);
+        DisableThreadLibraryCalls(hModule);
 
     case DLL_PROCESS_DETACH:
         break;
